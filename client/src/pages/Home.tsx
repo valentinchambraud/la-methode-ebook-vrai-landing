@@ -9,6 +9,7 @@
  */
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { EmailCaptureModal } from "@/components/EmailCaptureModal";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SocialProof, TrustBadges } from "@/components/SocialProof";
@@ -31,7 +32,7 @@ import {
 /* ==================== SHARED COMPONENTS ==================== */
 
 function SectionDivider() {
-  return <div className="border-t-2 border-dashed border-purple-500/60 my-0" />;
+  return <div className="border-t-2 border-dashed border-[#ccf708]/60 my-0" />;
 }
 
 function Badge({ text }: { text: string }) {
@@ -47,8 +48,8 @@ function GreenCTA({ text, onClick }: { text: string; onClick?: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="group relative w-full bg-[#00e64d] hover:bg-[#00ff55] text-black font-extrabold text-lg md:text-xl py-5 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] overflow-hidden"
-      style={{ fontFamily: "'Outfit', sans-serif", boxShadow: "0 0 30px rgba(0,230,77,0.3)" }}
+      className="group relative w-full bg-[#ccf708] hover:bg-[#d9ff33] text-black font-extrabold text-lg md:text-xl py-5 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] overflow-hidden"
+      style={{ fontFamily: "'Outfit', sans-serif", boxShadow: "0 0 30px rgba(204,247,8,0.3)" }}
     >
       <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
       <span className="relative flex items-center justify-center gap-3">
@@ -74,7 +75,7 @@ function Narrow({ children, className = "" }: { children: React.ReactNode; class
 
 function DashedImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
-    <div className={`border-2 border-dashed border-purple-500/50 rounded-xl p-2 ${className}`}>
+    <div className={`border-2 border-dashed border-[#ccf708]/50 rounded-xl p-2 ${className}`}>
       <img src={src} alt={alt} className="w-full h-auto rounded-lg" loading="lazy" />
     </div>
   );
@@ -127,7 +128,7 @@ export function LandingPage({ persona }: LandingPageProps) {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight mb-4 text-left">
             {p.heroTitle.split("IA").map((part, i, arr) =>
               i < arr.length - 1 ? (
-                <span key={i}>{part}<em className="text-violet-400 not-italic">IA</em></span>
+                <span key={i}>{part}<em className="text-[#ccf708] not-italic">IA</em></span>
               ) : (
                 <span key={i}>{part}</span>
               )
@@ -151,7 +152,7 @@ export function LandingPage({ persona }: LandingPageProps) {
               <div className="text-left">
                 <div className="flex items-center gap-1">
                   {[1,2,3,4,5].map(i => (
-                    <Star key={i} className={`w-3.5 h-3.5 ${i <= 4 ? "text-green-500 fill-green-500" : "text-green-500/50 fill-green-500/50"}`} />
+                    <Star key={i} className={`w-3.5 h-3.5 ${i <= 4 ? "text-[#ccf708] fill-[#ccf708]" : "text-[#ccf708]/50 fill-[#ccf708]/50"}`} />
                   ))}
                 </div>
                 <p className="text-xs text-gray-400 mt-0.5">4,6/5 pour +512 avis vérifiés</p>
@@ -253,13 +254,13 @@ export function LandingPage({ persona }: LandingPageProps) {
             <p>Ça n'a pas marché parce que <strong className="text-red-400">ces modèles sont cassés</strong>.</p>
 
             {/* Le closing / coaching */}
-            <div className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-4 mt-4">
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4 mt-4">
               <p className="font-bold text-white mb-2">Le closing et le coaching ?</p>
               <p>Tu ne veux plus que ton planning ressemble à un enfer. T'en as marre de passer ta vie à faire des appels de vente, d'avoir autant de clients à coacher.</p>
             </div>
 
             {/* Le copywriting / freelancing */}
-            <div className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-4">
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4">
               <p className="font-bold text-white mb-2">Le copywriting ou le freelancing ?</p>
               <p>Tu galères de plus en plus à trouver des clients. Et tu sais très bien que c'est à cause de l'<strong className="text-white">Intelligence Artificielle</strong> et des prestataires pas chers.</p>
             </div>
@@ -301,7 +302,7 @@ export function LandingPage({ persona }: LandingPageProps) {
             <p>{p.storyP3}</p>
 
             {/* Ancienneté — preuve VSL */}
-            <div className="bg-violet-500/5 border border-violet-500/20 rounded-xl p-4 mt-4">
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4 mt-4">
               <p className="text-sm text-gray-400">Nos plus vieux avis positifs datent de <strong className="text-white">2021</strong>. Nos élèves étaient déjà satisfaits de la qualité de nos produits il y a 5 ans.</p>
             </div>
 
@@ -347,16 +348,16 @@ export function LandingPage({ persona }: LandingPageProps) {
             <p>Tu ne reçois pas un lien avec un "bonne chance".</p>
 
             <div className="space-y-3 mt-4">
-              <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-4 flex items-start gap-3">
-                <span className="text-green-400 mt-0.5">✓</span>
+              <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4 flex items-start gap-3">
+                <span className="text-[#ccf708] mt-0.5">✓</span>
                 <p>Tu reçois les <strong className="text-white">idées de produits digitaux qui se vendent déjà</strong>.</p>
               </div>
-              <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-4 flex items-start gap-3">
-                <span className="text-green-400 mt-0.5">✓</span>
+              <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4 flex items-start gap-3">
+                <span className="text-[#ccf708] mt-0.5">✓</span>
                 <p>Tu reçois les <strong className="text-white">stratégies exactes qui fonctionnent déjà</strong>.</p>
               </div>
-              <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-4 flex items-start gap-3">
-                <span className="text-green-400 mt-0.5">✓</span>
+              <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4 flex items-start gap-3">
+                <span className="text-[#ccf708] mt-0.5">✓</span>
                 <p>Tu reçois une <strong className="text-white">formation pas à pas pour lancer en moins d'une heure</strong>.</p>
               </div>
             </div>
@@ -364,9 +365,9 @@ export function LandingPage({ persona }: LandingPageProps) {
             <p className="mt-6">Et tu n'es pas seul{p.pronoun === "elle" ? "e" : ""} :</p>
 
             {/* Assistance personnalisée — VSL argument */}
-            <div className="bg-violet-500/5 border border-violet-500/20 rounded-xl p-5 mt-2">
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-5 mt-2">
               <div className="flex items-center gap-3 mb-3">
-                <MessageCircle className="w-5 h-5 text-violet-400" />
+                <MessageCircle className="w-5 h-5 text-[#ccf708]" />
                 <h4 className="font-bold text-white">Assistance Personnalisée 7/7</h4>
               </div>
               <p className="text-gray-400 text-sm">Nous prenons le temps de vous répondre par <strong className="text-white">WhatsApp et Emails</strong>. Parce que vos résultats, ce sont nos résultats !</p>
@@ -383,33 +384,77 @@ export function LandingPage({ persona }: LandingPageProps) {
           <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Comment Ça Marche Concrètement</h2>
           <p className="text-gray-400 mb-10 text-base md:text-lg">Le Processus M3TA Stacking en 6 Étapes</p>
 
-          <div className="flex justify-center mb-10">
-            <img src={p.images.sixSteps} alt="Les 6 étapes" className="max-w-[200px] md:max-w-[260px]" />
-          </div>
+          {/* Mini flowchart visuel */}
+          {(() => {
+            const flowSteps = [
+              { icon: Target, label: "Idée", bg: "bg-red-500", glow: "shadow-red-500/40" },
+              { icon: Cpu, label: "IA", bg: "bg-blue-500", glow: "shadow-blue-500/40" },
+              { icon: FileText, label: "Ebook", bg: "bg-purple-500", glow: "shadow-purple-500/40" },
+              { icon: Megaphone, label: "Pub Meta", bg: "bg-orange-500", glow: "shadow-orange-500/40" },
+              { icon: DollarSign, label: "Vente", bg: "bg-gray-600", glow: "shadow-gray-500/40" },
+              { icon: TrendingUp, label: "Profit", bg: "bg-yellow-500", glow: "shadow-yellow-500/40" },
+            ];
+            return (
+              <div className="flex flex-col items-center gap-0 mb-12">
+                {flowSteps.map((step, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.12, duration: 0.4 }}
+                    className="flex flex-col items-center"
+                  >
+                    <div className={`flex items-center gap-2.5 px-5 py-2.5 rounded-full ${step.bg} shadow-lg ${step.glow}`}>
+                      <step.icon className="w-4 h-4 text-white" />
+                      <span className="text-white font-bold text-sm tracking-wide">{step.label}</span>
+                    </div>
+                    {i < flowSteps.length - 1 && (
+                      <motion.div
+                        initial={{ scaleY: 0 }}
+                        whileInView={{ scaleY: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.12 + 0.2, duration: 0.3 }}
+                        className="w-0.5 h-6 bg-gradient-to-b from-[#ccf708]/60 to-[#ccf708]/20 origin-top"
+                      />
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            );
+          })()}
 
+          {/* Détails des 6 étapes */}
           {(() => {
             const steps = [
-              { icon: Target, title: "Choisis une idée", desc: "Tu choisis une idée de produit digital dans la liste que je propose. Des produits dans plusieurs niches qui génèrent des centaines de ventes chaque jour.", color: "bg-red-500/20" },
-              { icon: Cpu, title: "Crée avec l'IA", desc: "Tu récupères les stratégies qui fonctionnent déjà. Tu copies et tu lances.", color: "bg-blue-500/20" },
-              { icon: Megaphone, title: "Lance ta pub", desc: "L'algorithme Meta identifie les personnes qui cherchent activement cette solution.", color: "bg-violet-500/20" },
-              { icon: DollarSign, title: "Encaisse", desc: "Tu es payé(e) sur chaque vente. Tu postes et tu encaisses. C'est tout.", color: "bg-green-500/20" },
-              { icon: Rocket, title: "Upsells automatiques", desc: "Le système propose automatiquement des offres complémentaires qui triplent ton revenu.", color: "bg-orange-500/20" },
-              { icon: TrendingUp, title: "Scale", desc: "Tu augmentes le budget ou tu dupliques dans d'autres niches.", color: "bg-emerald-500/20" },
+              { icon: Target, title: "Choisis une idée", desc: "Tu choisis une idée de produit digital dans la liste que je propose. Des produits dans plusieurs niches qui génèrent des centaines de ventes chaque jour.", color: "bg-red-500/20", iconColor: "text-red-400", borderColor: "border-red-500/60" },
+              { icon: Cpu, title: "Crée avec l'IA", desc: "Tu récupères les stratégies qui fonctionnent déjà. Tu copies et tu lances.", color: "bg-blue-500/20", iconColor: "text-blue-400", borderColor: "border-blue-500/60" },
+              { icon: Megaphone, title: "Lance ta pub", desc: "L'algorithme Meta identifie les personnes qui cherchent activement cette solution.", color: "bg-orange-500/20", iconColor: "text-orange-400", borderColor: "border-orange-500/60" },
+              { icon: DollarSign, title: "Encaisse", desc: "Tu es payé(e) sur chaque vente. Tu postes et tu encaisses. C'est tout.", color: "bg-gray-500/20", iconColor: "text-gray-400", borderColor: "border-gray-500/60" },
+              { icon: Rocket, title: "Upsells automatiques", desc: "Le système propose automatiquement des offres complémentaires qui triplent ton revenu.", color: "bg-purple-500/20", iconColor: "text-purple-400", borderColor: "border-purple-500/60" },
+              { icon: TrendingUp, title: "Scale", desc: "Tu augmentes le budget ou tu dupliques dans d'autres niches.", color: "bg-yellow-500/20", iconColor: "text-yellow-400", borderColor: "border-yellow-500/60" },
             ];
             return (
               <div className="relative">
-                <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-violet-600/40" />
+                <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-500/40 via-purple-500/40 to-yellow-500/40" />
                 <div className="space-y-6">
                   {steps.map((step, i) => (
-                    <div key={i} className="relative flex items-start gap-5 pl-14">
-                      <div className={`absolute left-3 w-7 h-7 rounded-full ${step.color} border-2 border-violet-500/60 flex items-center justify-center`}>
-                        <step.icon className="w-3.5 h-3.5 text-violet-300" />
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, duration: 0.4 }}
+                      className="relative flex items-start gap-5 pl-14"
+                    >
+                      <div className={`absolute left-3 w-7 h-7 rounded-full ${step.color} border-2 ${step.borderColor} flex items-center justify-center`}>
+                        <step.icon className={`w-3.5 h-3.5 ${step.iconColor}`} />
                       </div>
-                      <div className="bg-white/[0.03] border border-white/5 rounded-xl p-5 flex-1 hover:border-violet-500/20 transition-colors">
+                      <div className="bg-white/[0.03] border border-white/5 rounded-xl p-5 flex-1 hover:border-[#ccf708]/20 transition-colors">
                         <h3 className="font-bold text-white mb-1">Étape {i + 1} : {step.title}</h3>
                         <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -430,8 +475,8 @@ export function LandingPage({ persona }: LandingPageProps) {
             <p>L'industrie des produits digitaux est en <strong className="text-white">pleine explosion</strong>. On parle de milliards d'euros chaque année en France !</p>
 
             {/* 84% stat — VSL argument */}
-            <div className="bg-violet-500/5 border border-violet-500/20 rounded-xl p-6 my-6 text-center">
-              <p className="text-4xl md:text-5xl font-extrabold text-violet-400 mb-2">84%</p>
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-6 my-6 text-center">
+              <p className="text-4xl md:text-5xl font-extrabold text-[#ccf708] mb-2">84%</p>
               <p className="text-gray-300">des personnes <strong className="text-white">n'utilisent pas l'IA</strong></p>
               <p className="text-gray-500 text-sm mt-2">Vous pensez peut-être que tout le monde utilise ChatGPT... Alors qu'en réalité, très peu de personnes l'utilisent. C'est votre avantage.</p>
             </div>
@@ -476,7 +521,7 @@ export function LandingPage({ persona }: LandingPageProps) {
 
           {/* Trustpilot reminder */}
           <div className="mt-8 bg-white/5 border border-white/10 rounded-xl p-4 flex items-center gap-4">
-            <Shield className="w-8 h-8 text-green-500 shrink-0" />
+            <Shield className="w-8 h-8 text-[#ccf708] shrink-0" />
             <div>
               <p className="text-white font-bold text-sm">Vérifiable sur Trustpilot</p>
               <p className="text-gray-400 text-xs">4,6/5 avec +512 avis vérifiés — "Les Programmes™ de Valentin Chambraud"</p>
@@ -496,14 +541,14 @@ export function LandingPage({ persona }: LandingPageProps) {
             <p><strong className="text-white">C'est le produit que tu vends.</strong> Avoir un produit que les gens veulent vraiment acheter.</p>
             <p>Tu n'as pas besoin de rechercher l'idée toi-même. Il existe déjà des produits prouvés qui se vendent chaque jour.</p>
 
-            <div className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-4 mt-4">
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4 mt-4">
               <p><strong className="text-red-400">Si votre boutique de dropshipping fait un flop :</strong> Vous avez perdu des milliers d'euros en formation et en publicités.</p>
             </div>
-            <div className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-4">
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4">
               <p><strong className="text-red-400">Si votre produit Amazon ne se vend pas :</strong> Même chose.</p>
             </div>
-            <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-4">
-              <p><strong className="text-green-400">Mais avec le M3TA Stacking ?</strong> Au lieu de passer des mois à créer ton propre produit, tu prends une idée qu'on te donne, tu le crées avec nos modèles et l'IA, et tu le vends aujourd'hui.</p>
+            <div className="bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4">
+              <p><strong className="text-[#ccf708]">Mais avec le M3TA Stacking ?</strong> Au lieu de passer des mois à créer ton propre produit, tu prends une idée qu'on te donne, tu le crées avec nos modèles et l'IA, et tu le vends aujourd'hui.</p>
             </div>
           </div>
           <div className="mt-8">
@@ -530,14 +575,14 @@ export function LandingPage({ persona }: LandingPageProps) {
               { icon: Settings, num: "#7", title: "Mettre en Place la Livraison Automatique", desc: "Quand quelqu'un achète, il reçoit son produit instantanément. Votre business tourne 24/7, que vous dormiez ou que vous soyez à la plage." },
               { icon: TrendingUp, num: "#8", title: "Analyser et Scaler à 100k€/mois", desc: "Une fois que votre premier système est rentable, vous pouvez augmenter le budget ou dupliquer dans d'autres niches." },
             ].map((step, i) => (
-              <div key={i} className="bg-white/[0.03] border border-white/5 rounded-xl p-5 hover:border-violet-500/20 transition-colors">
+              <div key={i} className="bg-white/[0.03] border border-white/5 rounded-xl p-5 hover:border-[#ccf708]/20 transition-colors">
                 <div className="flex items-start gap-4">
-                  <div className="shrink-0 w-10 h-10 rounded-xl bg-violet-600/20 flex items-center justify-center">
-                    <step.icon className="w-5 h-5 text-violet-400" />
+                  <div className="shrink-0 w-10 h-10 rounded-xl bg-[#ccf708]/20 flex items-center justify-center">
+                    <step.icon className="w-5 h-5 text-[#ccf708]" />
                   </div>
                   <div>
                     <div className="flex items-center gap-3 mb-1">
-                      <span className="text-xs font-bold text-violet-400 bg-violet-500/10 px-2 py-0.5 rounded-full">{step.num}</span>
+                      <span className="text-xs font-bold text-[#ccf708] bg-[#ccf708]/10 px-2 py-0.5 rounded-full">{step.num}</span>
                       <h3 className="font-bold text-white">{step.title}</h3>
                     </div>
                     <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
@@ -568,8 +613,8 @@ export function LandingPage({ persona }: LandingPageProps) {
               { icon: Cpu, text: "27 Prompts IA Persuasifs (valeur 97€)" },
               { icon: BarChart3, text: "Template Page de Vente Haute Performance (valeur 97€)" },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 bg-green-500/5 border border-green-500/20 rounded-xl p-4">
-                <item.icon className="w-5 h-5 text-green-400 shrink-0" />
+              <div key={i} className="flex items-center gap-3 bg-[#ccf708]/5 border border-[#ccf708]/20 rounded-xl p-4">
+                <item.icon className="w-5 h-5 text-[#ccf708] shrink-0" />
                 <p className="text-gray-300 text-sm md:text-base">{item.text}</p>
               </div>
             ))}
@@ -587,9 +632,9 @@ export function LandingPage({ persona }: LandingPageProps) {
               { num: "MODULE 7", title: "Optimiser pour la Rentabilité", desc: "Une fois les pubs lancées, comment s'assurer qu'elles restent rentables ? Je vous apprends à lire les 3 métriques clés (CPA, AOV, ROAS)." },
               { num: "MODULE 8", title: "Scaler et Automatiser Votre Empire Digital", desc: "C'est ici que vous passez de \"side-project\" à véritable entrepreneur du digital." },
             ].map((mod, i) => (
-              <div key={i} className="bg-white/[0.03] border border-white/5 rounded-xl p-5 hover:border-violet-500/20 transition-colors">
+              <div key={i} className="bg-white/[0.03] border border-white/5 rounded-xl p-5 hover:border-[#ccf708]/20 transition-colors">
                 <div className="flex items-start gap-4">
-                  <span className="shrink-0 text-xs font-bold text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full mt-0.5">{mod.num}</span>
+                  <span className="shrink-0 text-xs font-bold text-[#ccf708] bg-[#ccf708]/10 px-3 py-1 rounded-full mt-0.5">{mod.num}</span>
                   <div>
                     <h3 className="font-bold text-white mb-1">{mod.title}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed">{mod.desc}</p>
@@ -650,7 +695,7 @@ export function LandingPage({ persona }: LandingPageProps) {
           </div>
 
           {/* Prix — VSL style */}
-          <div className="bg-violet-500/5 border-2 border-violet-500/30 rounded-2xl p-8 text-center mb-6">
+          <div className="bg-[#ccf708]/5 border-2 border-[#ccf708]/30 rounded-2xl p-8 text-center mb-6">
             <p className="text-gray-400 text-sm mb-2">Ce mois-ci, nous allons descendre le prix à :</p>
             <p className="text-5xl md:text-6xl font-extrabold text-white mb-2">27€</p>
             <p className="text-gray-500 text-xs">C'est moins cher qu'un resto. C'est le prix d'un mauvais fast-food.</p>
@@ -712,13 +757,13 @@ export function LandingPage({ persona }: LandingPageProps) {
             {/* Timing — VSL style */}
             <div className="bg-white/5 border border-white/10 rounded-xl p-5 mt-4">
               <div className="flex items-center gap-3 mb-3">
-                <Clock className="w-5 h-5 text-violet-400" />
+                <Clock className="w-5 h-5 text-[#ccf708]" />
                 <p className="font-bold text-white">Quand tu cliques sur le bouton :</p>
               </div>
               <ul className="space-y-2 text-gray-300 text-sm">
-                <li className="flex items-start gap-2"><span className="text-green-400">→</span>Tu obtiens un accès instantané</li>
-                <li className="flex items-start gap-2"><span className="text-green-400">→</span>Dans les 60 prochaines minutes, ton business est lancé</li>
-                <li className="flex items-start gap-2"><span className="text-green-400">→</span>Et dans les 24 à 72 heures, ta première vente</li>
+                <li className="flex items-start gap-2"><span className="text-[#ccf708]">→</span>Tu obtiens un accès instantané</li>
+                <li className="flex items-start gap-2"><span className="text-[#ccf708]">→</span>Dans les 60 prochaines minutes, ton business est lancé</li>
+                <li className="flex items-start gap-2"><span className="text-[#ccf708]">→</span>Et dans les 24 à 72 heures, ta première vente</li>
               </ul>
             </div>
 
@@ -741,11 +786,11 @@ export function LandingPage({ persona }: LandingPageProps) {
           {/* Final Trustpilot + community reminder */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center gap-3">
-              <Star className="w-5 h-5 text-green-500 shrink-0" />
+              <Star className="w-5 h-5 text-[#ccf708] shrink-0" />
               <p className="text-gray-400 text-xs">4,6/5 sur Trustpilot avec +512 avis</p>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center gap-3">
-              <Users className="w-5 h-5 text-violet-400 shrink-0" />
+              <Users className="w-5 h-5 text-[#ccf708] shrink-0" />
               <p className="text-gray-400 text-xs">Communauté active + assistance 7/7</p>
             </div>
           </div>
@@ -763,7 +808,7 @@ export function LandingPage({ persona }: LandingPageProps) {
           <Badge text="Bonus pour Action Rapide" />
           <h2 className="text-2xl md:text-3xl font-extrabold mb-6">Votre Empire Digital Commence Aujourd'hui.</h2>
           <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-4 bg-white/5 border border-purple-500/20 rounded-xl px-6 py-4">
+            <div className="inline-flex items-center gap-4 bg-white/5 border border-[#ccf708]/20 rounded-xl px-6 py-4">
               {["02", "14", "37"].map((val, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <div className="bg-red-600/20 rounded-lg px-3 py-2">
@@ -842,7 +887,7 @@ function FAQSection({ persona }: { persona: Persona }) {
                 className="w-full flex items-center justify-between p-5 text-left hover:bg-white/[0.02] transition-colors"
               >
                 <span className="font-medium text-white text-sm md:text-base pr-4">{item.q}</span>
-                <ChevronDown className={`w-5 h-5 text-violet-400 shrink-0 transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-5 h-5 text-[#ccf708] shrink-0 transition-transform duration-300 ${openIndex === i ? "rotate-180" : ""}`} />
               </button>
               <div className={`overflow-hidden transition-all duration-300 ${openIndex === i ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
                 <p className="px-5 pb-5 text-gray-400 text-sm leading-relaxed">{item.a}</p>

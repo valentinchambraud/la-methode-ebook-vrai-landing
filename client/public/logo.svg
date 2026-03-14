@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 70">
+  <defs>
+    <linearGradient id="circleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4ff1a"/>
+      <stop offset="100%" stop-color="#a8d600"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Green circle background -->
+  <circle cx="35" cy="35" r="33" fill="url(#circleGrad)"/>
+
+  <!-- Monitor/screen -->
+  <rect x="17" y="14" width="36" height="28" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/>
+  <!-- Screen inner -->
+  <rect x="20" y="17" width="30" height="22" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+  <!-- Monitor stand -->
+  <line x1="35" y1="42" x2="35" y2="48" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="27" y1="48" x2="43" y2="48" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Open book on screen -->
+  <!-- Left page -->
+  <path d="M26 20 C26 20, 34 19, 35 22 L35 36 C34 33, 26 34, 26 34 Z" fill="#fff" opacity="0.9"/>
+  <!-- Right page -->
+  <path d="M44 20 C44 20, 36 19, 35 22 L35 36 C36 33, 44 34, 44 34 Z" fill="#fff" opacity="0.7"/>
+  <!-- Book lines left -->
+  <line x1="28" y1="24" x2="33" y2="23.5" stroke="#a8d600" stroke-width="0.8"/>
+  <line x1="28" y1="27" x2="33" y2="26.5" stroke="#a8d600" stroke-width="0.8"/>
+  <line x1="28" y1="30" x2="33" y2="29.5" stroke="#a8d600" stroke-width="0.8"/>
+
+  <!-- Text "La Méthode" in white bold -->
+  <text x="80" y="46" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="-0.5">La Méthode</text>
+
+  <!-- Text "EBOOK" in #ccf708 extra bold -->
+  <text x="340" y="46" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="900" fill="#ccf708" letter-spacing="0.5">EBOOK</text>
+</svg>

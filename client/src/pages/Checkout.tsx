@@ -10,7 +10,7 @@ import { Shield, Lock, Star, Check, ChevronDown, CreditCard, Zap } from "lucide-
 const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663305920105/VBlJUskbXMvQgTZU.png";
 
 const TESTIMONIALS_MINI = [
-  { name: "Emmanuelle", letter: "E", color: "#8b5cf6" },
+  { name: "Emmanuelle", letter: "E", color: "#ccf708" },
   { name: "Alice", letter: "A", color: "#ec4899" },
   { name: "Louis", letter: "L", color: "#3b82f6" },
   { name: "Jacques", letter: "J", color: "#10b981" },
@@ -49,7 +49,7 @@ export default function Checkout() {
             <img src={LOGO_URL} alt="La Méthode EBOOK" className="h-10" />
           </a>
           <div className="flex items-center gap-1.5 text-xs text-gray-500">
-            <Lock size={12} className="text-green-500" />
+            <Lock size={12} className="text-[#ccf708]" />
             <span>Paiement sécurisé SSL</span>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function Checkout() {
             <div
               className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold"
               style={{
-                background: step >= 1 ? "#8b5cf6" : "rgba(255,255,255,0.1)",
+                background: step >= 1 ? "#ccf708" : "rgba(255,255,255,0.1)",
                 color: "white",
               }}
             >
@@ -78,7 +78,7 @@ export default function Checkout() {
           {/* Connector */}
           <div
             className="w-16 h-px mx-4"
-            style={{ background: step >= 2 ? "#8b5cf6" : "rgba(255,255,255,0.1)" }}
+            style={{ background: step >= 2 ? "#ccf708" : "rgba(255,255,255,0.1)" }}
           />
 
           {/* Step 2 */}
@@ -86,7 +86,7 @@ export default function Checkout() {
             <div
               className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold"
               style={{
-                background: step >= 2 ? "#8b5cf6" : "rgba(255,255,255,0.1)",
+                background: step >= 2 ? "#ccf708" : "rgba(255,255,255,0.1)",
                 color: step >= 2 ? "white" : "#6b7280",
               }}
             >
@@ -151,7 +151,7 @@ export default function Checkout() {
             {/* Main product */}
             <div
               className="flex items-center justify-between p-4 rounded-xl mb-3"
-              style={{ background: "rgba(139,92,246,0.08)", border: "1px solid rgba(139,92,246,0.2)" }}
+              style={{ background: "rgba(204,247,8,0.08)", border: "1px solid rgba(204,247,8,0.2)" }}
             >
               <div>
                 <div className="text-white font-bold text-sm">M3TA Stacking™ : Méthode Complète</div>
@@ -176,7 +176,7 @@ export default function Checkout() {
                 <div
                   className="w-5 h-5 rounded flex items-center justify-center shrink-0 mt-0.5"
                   style={{
-                    background: upsellChecked ? "#16a34a" : "rgba(255,255,255,0.1)",
+                    background: upsellChecked ? "#ccf708" : "rgba(255,255,255,0.1)",
                     border: upsellChecked ? "none" : "1px solid rgba(255,255,255,0.2)",
                   }}
                 >
@@ -217,7 +217,7 @@ export default function Checkout() {
               <h2 className="text-xs font-bold uppercase tracking-widest text-gray-500">
                 Finaliser votre commande
               </h2>
-              <div className="flex items-center gap-1 text-xs text-green-400">
+              <div className="flex items-center gap-1 text-xs text-[#ccf708]">
                 <Lock size={11} />
                 <span>Checkout sécurisé</span>
               </div>
@@ -241,8 +241,8 @@ export default function Checkout() {
                     border: "1px solid rgba(255,255,255,0.1)",
                   }}
                   onFocus={(e) => {
-                    e.target.style.border = "1px solid rgba(139,92,246,0.5)";
-                    e.target.style.boxShadow = "0 0 0 3px rgba(139,92,246,0.1)";
+                    e.target.style.border = "1px solid rgba(204,247,8,0.5)";
+                    e.target.style.boxShadow = "0 0 0 3px rgba(204,247,8,0.1)";
                   }}
                   onBlur={(e) => {
                     e.target.style.border = "1px solid rgba(255,255,255,0.1)";
@@ -258,13 +258,13 @@ export default function Checkout() {
                 </label>
                 <div
                   className="flex items-center gap-2 px-4 py-3 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(139,92,246,0.3)" }}
+                  style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(204,247,8,0.3)" }}
                 >
                   <div
                     className="w-4 h-4 rounded-full border-2 flex items-center justify-center"
-                    style={{ borderColor: "#8b5cf6" }}
+                    style={{ borderColor: "#ccf708" }}
                   >
-                    <div className="w-2 h-2 rounded-full" style={{ background: "#8b5cf6" }} />
+                    <div className="w-2 h-2 rounded-full" style={{ background: "#ccf708" }} />
                   </div>
                   <CreditCard size={16} className="text-gray-400" />
                   <span className="text-white text-sm font-medium">Carte bancaire</span>
@@ -380,7 +380,7 @@ export default function Checkout() {
                   <button
                     type="button"
                     className="px-4 py-2.5 rounded-xl text-sm font-semibold text-white transition-colors"
-                    style={{ background: "rgba(139,92,246,0.2)", border: "1px solid rgba(139,92,246,0.3)" }}
+                    style={{ background: "rgba(204,247,8,0.2)", border: "1px solid rgba(204,247,8,0.3)" }}
                   >
                     Appliquer
                   </button>
@@ -399,10 +399,10 @@ export default function Checkout() {
               {/* CTA */}
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl font-black text-lg text-white flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
+                className="w-full py-4 rounded-xl font-black text-lg text-black flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.01] active:scale-[0.99]"
                 style={{
-                  background: "linear-gradient(135deg, #16a34a, #15803d)",
-                  boxShadow: "0 4px 24px rgba(22,163,74,0.4), 0 0 0 1px rgba(22,163,74,0.3)",
+                  background: "linear-gradient(135deg, #ccf708, #b8e006)",
+                  boxShadow: "0 4px 24px rgba(204,247,8,0.4), 0 0 0 1px rgba(204,247,8,0.3)",
                   letterSpacing: "-0.01em",
                 }}
               >
@@ -430,11 +430,11 @@ export default function Checkout() {
               className="w-14 h-14 rounded-full flex items-center justify-center"
               style={{ background: "rgba(22,163,74,0.15)", border: "2px solid rgba(22,163,74,0.4)" }}
             >
-              <Shield size={24} className="text-green-400" />
+              <Shield size={24} className="text-[#ccf708]" />
             </div>
             <div>
               <h3 className="text-white font-black text-lg mb-1">Garantie 30 Jours Remboursé</h3>
-              <p className="text-green-400 text-sm font-semibold mb-2">Investissement 100% sans risque</p>
+              <p className="text-[#ccf708] text-sm font-semibold mb-2">Investissement 100% sans risque</p>
               <p className="text-gray-400 text-sm max-w-md leading-relaxed">
                 Testez le M3TA Stacking™ pendant 30 jours complets. Si vous n'êtes pas satisfait pour quelque raison que ce soit, nous vous remboursons intégralement. Sans questions.
               </p>
@@ -460,7 +460,7 @@ export default function Checkout() {
               className="flex items-center gap-2 px-3 py-2.5 rounded-xl"
               style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}
             >
-              <Check size={14} className="text-green-400 shrink-0" />
+              <Check size={14} className="text-[#ccf708] shrink-0" />
               <span className="text-gray-300 text-xs">{item}</span>
             </div>
           ))}

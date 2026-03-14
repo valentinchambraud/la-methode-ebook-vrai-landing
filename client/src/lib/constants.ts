@@ -1,4 +1,4 @@
-export const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663305920105/rCqJwrehdwHiJral.png";
+export const LOGO_URL = "/logo-green.png";
 
 // Bundle mockup cartoon (shared)
 export const BUNDLE_MOCKUP_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663305920105/3ByN3oHLTysErYvFB8KwB2/v2_bundle_v1-R9rnXEhajDzFFdfjPD99Z5.png";

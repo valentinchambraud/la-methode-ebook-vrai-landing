@@ -54,7 +54,7 @@ const DOUBLED = [...TESTIMONIAL_IMAGES, ...TESTIMONIAL_IMAGES];
 
 export function TestimonialsCarousel() {
   return (
-    <section className="py-10 md:py-14 bg-gradient-to-b from-[#0b0b0f] to-[#0d0a18]">
+    <section className="py-10 md:py-14 bg-gradient-to-b from-[#0b0b0f] to-[#0b0b0f]">
       {/* Label centré aligné sur le contenu */}
       <div className="max-w-5xl mx-auto px-4 md:px-8 mb-8">
         <p className="text-center text-xs uppercase tracking-[0.2em] text-gray-500">
@@ -89,7 +89,7 @@ export function TestimonialsCarousel() {
             {DOUBLED.map((img, i) => (
               <div
                 key={i}
-                className="shrink-0 rounded-xl overflow-hidden border border-white/5 hover:border-violet-500/30 transition-colors duration-300 shadow-md"
+                className="shrink-0 rounded-xl overflow-hidden border border-white/5 hover:border-[#ccf708]/30 transition-colors duration-300 shadow-md"
                 style={{ width: "700px" }}
               >
                 <img

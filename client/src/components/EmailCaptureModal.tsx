@@ -38,15 +38,15 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
       <div
         className="relative w-full max-w-md rounded-2xl overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #13111f 0%, #0d0b1a 100%)",
-          border: "1px solid rgba(139,92,246,0.3)",
-          boxShadow: "0 0 60px rgba(139,92,246,0.2), 0 25px 50px rgba(0,0,0,0.6)",
+          background: "linear-gradient(135deg, #111111 0%, #0a0a0f 100%)",
+          border: "1px solid rgba(204,247,8,0.3)",
+          boxShadow: "0 0 60px rgba(204,247,8,0.2), 0 25px 50px rgba(0,0,0,0.6)",
         }}
       >
         {/* Glow top */}
         <div
           className="absolute top-0 left-0 right-0 h-px"
-          style={{ background: "linear-gradient(90deg, transparent, #8b5cf6, transparent)" }}
+          style={{ background: "linear-gradient(90deg, transparent, #ccf708, transparent)" }}
         />
 
         {/* Close button */}
@@ -64,7 +64,7 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
               <div className="flex justify-center mb-5">
                 <span
                   className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full"
-                  style={{ background: "rgba(139,92,246,0.15)", color: "#a78bfa", border: "1px solid rgba(139,92,246,0.3)" }}
+                  style={{ background: "rgba(204,247,8,0.15)", color: "#ccf708", border: "1px solid rgba(204,247,8,0.3)" }}
                 >
                   <Zap size={11} />
                   Accès Immédiat
@@ -80,16 +80,16 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
               </h2>
               <p className="text-center text-gray-400 text-sm mb-6 leading-relaxed">
                 Entrez votre email pour accéder à la méthode complète.<br />
-                <span className="text-violet-400 font-semibold">Accès immédiat</span>, seulement <span className="text-white font-bold">27€</span> aujourd'hui.
+                <span className="text-[#ccf708] font-semibold">Accès immédiat</span>, seulement <span className="text-white font-bold">27€</span> aujourd'hui.
               </p>
 
               {/* Social proof mini */}
               <div className="flex items-center justify-center gap-2 mb-6">
                 <div className="flex">
-                  {["bg-violet-500", "bg-pink-500", "bg-blue-500"].map((c, i) => (
+                  {["bg-[#ccf708]", "bg-[#ccf708]", "bg-[#ccf708]"].map((c, i) => (
                     <div
                       key={i}
-                      className={`w-7 h-7 rounded-full ${c} border-2 border-[#13111f] flex items-center justify-center text-white text-xs font-bold`}
+                      className={`w-7 h-7 rounded-full ${c} border-2 border-[#111111] flex items-center justify-center text-white text-xs font-bold`}
                       style={{ marginLeft: i > 0 ? "-8px" : "0" }}
                     >
                       {["E", "A", "L"][i]}
@@ -117,8 +117,8 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
                       border: "1px solid rgba(255,255,255,0.1)",
                     }}
                     onFocus={(e) => {
-                      e.target.style.border = "1px solid rgba(139,92,246,0.6)";
-                      e.target.style.boxShadow = "0 0 0 3px rgba(139,92,246,0.1)";
+                      e.target.style.border = "1px solid rgba(204,247,8,0.6)";
+                      e.target.style.boxShadow = "0 0 0 3px rgba(204,247,8,0.1)";
                     }}
                     onBlur={(e) => {
                       e.target.style.border = "1px solid rgba(255,255,255,0.1)";
@@ -129,10 +129,10 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl font-black text-base text-white flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full py-4 rounded-xl font-black text-base text-black flex items-center justify-center gap-2 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                   style={{
-                    background: "linear-gradient(135deg, #16a34a, #15803d)",
-                    boxShadow: "0 4px 20px rgba(22,163,74,0.4), 0 0 0 1px rgba(22,163,74,0.3)",
+                    background: "linear-gradient(135deg, #ccf708, #b8e006)",
+                    boxShadow: "0 4px 20px rgba(204,247,8,0.4), 0 0 0 1px rgba(204,247,8,0.3)",
                     fontFamily: "'Outfit', sans-serif",
                     letterSpacing: "-0.01em",
                   }}
@@ -155,7 +155,7 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
             <div className="text-center py-4">
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                style={{ background: "rgba(22,163,74,0.15)", border: "1px solid rgba(22,163,74,0.4)" }}
+                style={{ background: "rgba(204,247,8,0.15)", border: "1px solid rgba(204,247,8,0.4)" }}
               >
                 <span className="text-3xl">✓</span>
               </div>
@@ -169,7 +169,7 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
                 <div
                   className="h-full rounded-full"
                   style={{
-                    background: "linear-gradient(90deg, #8b5cf6, #16a34a)",
+                    background: "linear-gradient(90deg, #ccf708, #d9ff33)",
                     animation: "progress-fill 1.2s ease-out forwards",
                   }}
                 />
