@@ -15,7 +15,7 @@ export function SocialProof({ className = "" }: { className?: string }) {
             <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
           ))}
         </div>
-        <span className="text-gray-300 text-sm">Rejoignez +400 élèves</span>
+        <span className="text-gray-300 text-sm">Rejoignez +407 élèves</span>
       </div>
     </div>
   );
