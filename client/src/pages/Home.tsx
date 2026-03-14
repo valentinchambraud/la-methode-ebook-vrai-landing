@@ -601,7 +601,7 @@ export function LandingPage({ persona }: LandingPageProps) {
         <Narrow>
           <Badge text="Curriculum" />
           <h2 className="text-2xl md:text-3xl font-extrabold mb-3">Voici Ce Que Tu Reçois Aujourd'hui</h2>
-          <DashedImage src={BUNDLE_MOCKUP_IMG} alt="La Méthode Ebook - Bundle complet" className="mb-8 mt-6" />
+          <img src={BUNDLE_MOCKUP_IMG} alt="La Méthode Ebook - Bundle complet" className="mb-8 mt-6 w-full max-w-2xl mx-auto" />
 
           {/* What you get — VSL style */}
           <div className="space-y-3 mb-8">
