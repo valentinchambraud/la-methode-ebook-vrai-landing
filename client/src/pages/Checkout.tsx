@@ -130,7 +130,7 @@ export default function Checkout() {
             <div className="flex">
               {[1,2,3,4,5].map(s => <Star key={s} size={13} className="text-yellow-400 fill-yellow-400" />)}
             </div>
-            <span className="text-gray-400 text-sm">Rejoignez +3 467 élèves</span>
+            <span className="text-gray-400 text-sm">Rejoignez +400 élèves</span>
           </div>
         </div>
 

@@ -99,7 +99,7 @@ export function EmailCaptureModal({ isOpen, onClose }: EmailCaptureModalProps) {
                 <div className="flex">
                   {[1,2,3,4,5].map(s => <Star key={s} size={12} className="text-yellow-400 fill-yellow-400" />)}
                 </div>
-                <span className="text-gray-400 text-xs">+3 467 élèves</span>
+                <span className="text-gray-400 text-xs">+400 élèves</span>
               </div>
 
               {/* Form */}

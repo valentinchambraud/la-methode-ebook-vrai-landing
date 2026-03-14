@@ -9,13 +9,13 @@ export function SocialProof({ className = "" }: { className?: string }) {
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Étudiante" className="w-10 h-10 rounded-full border-2 border-[#ccf708] object-cover" />
           <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="Étudiant" className="w-10 h-10 rounded-full border-2 border-[#ccf708] object-cover" />
         </div>
-        <span className="bg-[#ccf708] text-black text-xs font-bold px-2 py-1 rounded-full">+3 400</span>
+        <span className="bg-[#ccf708] text-black text-xs font-bold px-2 py-1 rounded-full">+400</span>
         <div className="flex gap-0.5">
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
           ))}
         </div>
-        <span className="text-gray-300 text-sm">Rejoignez +3 467 élèves</span>
+        <span className="text-gray-300 text-sm">Rejoignez +400 élèves</span>
       </div>
     </div>
   );
