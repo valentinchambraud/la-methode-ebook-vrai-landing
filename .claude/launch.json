@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "methode-ebook",
+      "runtimeExecutable": "/Users/BAUD_Baptiste/.nvm/versions/node/v20.20.1/bin/node",
+      "runtimeArgs": ["/Users/BAUD_Baptiste/Downloads/la-methode-ebook-vrai-landing/node_modules/vite/bin/vite.js", "--host", "--port", "3001"],
+      "port": 3001
+    }
+  ]
+}
